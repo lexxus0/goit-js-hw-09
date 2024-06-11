@@ -43,8 +43,21 @@
       <button type="submit">Submit</button>
   </form>
   </div>
-</section>
+  
 
+
+  <script>
+    function removePlaceholder() {
+      const placeholder = document.getElementById('placeholder');
+      if (placeholder) {
+        placeholder.remove();
+      }
+    }
+
+    document.querySelectorAll('load').forEach(loadElement => {
+      loadElement.addEventListener('load', removePlaceholder);
+    });
+  </script>
 </body>
 
 </html>
